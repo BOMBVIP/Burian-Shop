@@ -15,6 +15,14 @@ namespace BurianShop.MVVM.ViewModel
         private byte discount;
         private string description;
         private byte[] image;
+        private string category;
+
+        public string Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
+
 
         public byte[] Image
         {

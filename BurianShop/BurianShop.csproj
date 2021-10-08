@@ -75,6 +75,7 @@
     <Compile Include="MVVM\Model\EF\ShopModelInitializer.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ProductViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\ShoppingCardViewModel.cs" />
     <Compile Include="Themes\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
