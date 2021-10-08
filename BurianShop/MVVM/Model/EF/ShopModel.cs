@@ -18,11 +18,11 @@ namespace BurianShop.MVVM
         }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public virtual DbSet<ShoppingCard> ShoppingCarts { get; set; }
     }
 
-    public class User : INotifyPropertyChanged
-    {
+    public class User
+    { 
         [Key]
         public int Id { get; set; }
         [Required]
@@ -34,56 +34,40 @@ namespace BurianShop.MVVM
         public decimal Money { get; set; }
         // Navigation property
         public virtual Role Role { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
-    public class ShoppingCart : INotifyPropertyChanged
+    public class ShoppingCard
     {
         [Required]
         public int UserId { get; set; }
         public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 
-    public class Product : INotifyPropertyChanged
+    public class Category
     {
+        public int Id { get; set; }
         [Required]
+        public string Name { get; set; }
+    }
+
+    public class Product
+    {
+        [Required] 
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         public byte Discount { get; set; }
         public string Description { get; set; }
         public byte[] ProductImage { get; set; }
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        public int? CategoryId { get; set; }
+        public Category category { get; set; }
     }
 
-    public class Role : INotifyPropertyChanged
+
+    public class Role
     {
         [Key]
         public string Name { get; set; }
         // Navigation properties
         public ICollection<User> Users { get; set; } = new HashSet<User>();
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }
