@@ -1,5 +1,4 @@
 using BurianShop.Core;
-using DAL.EF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,7 +41,6 @@ namespace BurianShop.MVVM
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
     public class ShoppingCart : INotifyPropertyChanged
     {
@@ -65,11 +63,9 @@ namespace BurianShop.MVVM
         [Required]
         public string Name { get; set; }
         public byte Discount { get; set; }
-        public string[] Description { get; set; }
+        public string Description { get; set; }
         public byte[] ProductImage { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
