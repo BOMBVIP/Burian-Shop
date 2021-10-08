@@ -52,3 +52,9 @@ C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\BurianShop
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\BurianShop.csproj.CopyComplete
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\BurianShop.exe
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\BurianShop.pdb
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\MVVM\ViewModel\MainViewModel.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\Themes\AuthorizationWindow.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\MVVM\ViewModel\MainViewModel.baml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop3\BurianShop\obj\Debug\Themes\AuthorizationWindow.baml
