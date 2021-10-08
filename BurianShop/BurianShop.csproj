@@ -145,6 +145,12 @@
   <ItemGroup>
     <Folder Include="MVVM\View\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BurianShopService\BurianShopService.csproj">
+      <Project>{9f38566e-00a3-404c-bff4-a5f99401ddbf}</Project>
+      <Name>BurianShopService</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0-ci53\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0-ci53\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
