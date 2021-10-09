@@ -1,6 +1,7 @@
-BurianShop\bin
-BurianShop\obj
-DAL\bin
-DAL\obj
-BurianShopService\bin
-BurianShopService\obj
+.vs/
+BurianShop/bin/
+BurianShop/obj/
+DAL/bin/
+DAL/obj/
+BurianShopService/bin/
+BurianShopService/obj/
