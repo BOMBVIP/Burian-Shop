@@ -1,5 +1,4 @@
 using BurianShop.Core;
-using DAL.EF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
