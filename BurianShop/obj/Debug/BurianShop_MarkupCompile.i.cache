@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\tlvla\Source\Repos\Burian-Shop-3rd-try\BurianShop\App.xaml
-4-1480375523
+71816319133
 
-15-1549290786
-19414943447
-MainWindow.xaml;MVVM\View\ProductListView.xaml;Themes\AuthorizationWindow.xaml;Themes\ScrollBar.xaml;
+16-1945527219
+21404067586
+MainWindow.xaml;MVVM\View\Authorization.xaml;MVVM\View\ProductListView.xaml;MVVM\View\Registration.xaml;Themes\Password.xaml;Themes\Login.xaml;Themes\ScrollBar.xaml;
 
 True
 
