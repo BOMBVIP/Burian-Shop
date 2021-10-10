@@ -46,7 +46,7 @@
                     Command="{Binding CloseWindowCommand}"
                     Style="{StaticResource MaterialDesignFloatingActionLightButton}"
                     ToolTip="CloseWindow" Name="CloseButton"
-                    Margin="10">
+                    Margin="10" Click="CloseButton_Click">
 
                     <materialDesign:PackIcon Kind="WindowClose" Width="24" Height="24" />
                 </Button>
