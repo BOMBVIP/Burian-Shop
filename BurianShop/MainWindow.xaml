@@ -108,10 +108,10 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3">
-                <Button Margin="60,15,60,30"
+                <Button Margin="60,0,60,30"
                         Height="50"
                         Background="#7289da"
-                        Content="Login"
+                        Content="Sign In"
                         Foreground="White"
                         FontWeight="SemiBold"
                         FontSize="15">
@@ -121,6 +121,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
+                <Label Height="30"
+                       Width="Auto"
+                       Content="Sign Out"
+                       HorizontalContentAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="-30"
+                       FontSize="15"
+                       Foreground="White"/>
             </StackPanel>
         </Grid>
     </Grid>
