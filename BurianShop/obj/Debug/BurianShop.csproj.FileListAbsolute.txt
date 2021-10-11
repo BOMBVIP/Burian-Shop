@@ -131,3 +131,17 @@ C:\Users\tlvla\Source\Repos\Burian-Shop-3rd-try\BurianShop\bin\Debug\MahApps.Met
 C:\Users\tlvla\Source\Repos\Burian-Shop-3rd-try\BurianShop\bin\Debug\MaterialDesignColors.pdb
 C:\Users\tlvla\Source\Repos\Burian-Shop-3rd-try\BurianShop\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\tlvla\Source\Repos\Burian-Shop-3rd-try\BurianShop\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\BurianShop.csproj.AssemblyReference.cache
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\Themes\Password.baml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\Themes\Login.baml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\Themes\ScrollBar.baml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\MainWindow.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\MVVM\View\Authorization.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\MVVM\View\ProductListView.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\MVVM\View\Registration.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\MVVM\View\SettingsPage.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\App.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\BurianShop_MarkupCompile.cache
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\BurianShop_MarkupCompile.lref
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\BurianShop.exe
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\obj\Debug\BurianShop.pdb
