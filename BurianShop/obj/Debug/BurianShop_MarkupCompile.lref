@@ -1,5 +1,8 @@
 ﻿
 FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\App.xaml;;
 FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\MainWindow.xaml;;
-FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\Themes\AuthorizationWindow.xaml;;
+FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\MVVM\View\Authorization.xaml;;
+FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\MVVM\View\ProductListView.xaml;;
+FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\MVVM\View\Registration.xaml;;
+FC:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop1\BurianShop\MVVM\View\SettingsPage.xaml;;
 
