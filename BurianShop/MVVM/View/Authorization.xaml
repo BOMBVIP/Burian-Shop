@@ -1,0 +1,131 @@
+﻿<Window x:Class="BurianShop.MVVM.View.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BurianShop.MVVM.View" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Authorization" 
+        WindowStyle="None"
+        Background="#36393F"
+        AllowsTransparency="True"
+        MinHeight="500"
+        MinWidth="400"
+        MaxHeight="500"
+        MaxWidth="400"
+        Height="500"
+        Width="400">
+    <Grid Margin="0,0,1,0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.RowSpan="4" CornerRadius="12">
+            </Border>
+            <Label Foreground="DarkGray"
+               FontWeight="SemiBold" MouseDown="Label_MouseDown"
+                Margin="0,0,-1,0"/>
+            <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal" Margin="0,0,-1,0">
+                <Button Width="20"
+                    Height="20"
+                    Content="_"
+                    Background="Transparent" 
+                    Foreground="Gray"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Margin="5" 
+                    Click="ButtonMinimize_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Width="20"
+                    Height="20"
+                    Content="⨉"
+                    Background="Transparent" 
+                    Foreground="Gray"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Margin="7" 
+                    Click="ButtonExit_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center">
+                <Border HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Foreground="White" Kind="Cart" Width="100" Height="100"/>
+                </Border>
+                <Label Content="BURIANSHOP"
+                   FontFamily="{StaticResource BebasFontBook}"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontSize="32"
+                   FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"
+                        VerticalAlignment="Top">
+
+                <Label Content="Login"
+                       IsHitTestVisible="False"
+                       Width="Auto"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,225,-10"
+                       Foreground="DarkGray"
+                       FontWeight="DemiBold"
+                       FontSize="15"/>
+
+                <TextBox Grid.Row="1" Height="50"
+                         Width="280"
+                         MaxLength="5"
+                         HorizontalAlignment="Center"
+                         Text="Message"
+                         Style="{StaticResource Login}"/>
+
+                <Label Content="Password"
+                       IsHitTestVisible="False"
+                       Width="Auto"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,200,-10"
+                       Foreground="DarkGray"
+                       FontWeight="DemiBold"
+                       FontSize="15"/>
+
+                <TextBox Grid.Row="1" Height="50"
+                         Width="280"
+                         MaxLength="5"
+                         HorizontalAlignment="Center"
+                         Style="{StaticResource Password}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3">
+                <Button Margin="111,15,108,30"
+                        Height="50"
+                        Background="#7289da"
+                        Content="Login"
+                        Foreground="White"
+                        FontWeight="SemiBold"
+                        FontSize="15">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
