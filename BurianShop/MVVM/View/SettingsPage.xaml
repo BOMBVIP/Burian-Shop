@@ -63,11 +63,14 @@
                 </StackPanel>
             </Grid>
         </Border>
+        
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6*"/>
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
         </Grid>
+        
+        
     </Grid>
 </Window>

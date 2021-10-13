@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace BurianShop.MVVM.ViewModel
 {
@@ -18,38 +19,47 @@ namespace BurianShop.MVVM.ViewModel
             get => _product;
             set { _product = value; OnPropertyChanged(); }
         }
-        public MainViewModel()
+        ShopModel _context;
+        Mapper _mapper;
+
+        public MainViewModel(ShopModel context)
         {
-            Products = new ObservableCollection<ProductViewModel>();
-            Products.Add(new ProductViewModel
-            {
-                Id = 2312321,
-                Name="Banana",
-                Description = "Banana from Kavkaz",
-                Category = "Fruits",
-                Discount = 12,
-                Image = new byte[] {1,2,3,4}
+            var config = new MapperConfiguration(c => {
+                c.CreateMap<Product, ProductViewModel>().ReverseMap();
             });
-            Products.Add(new ProductViewModel
-            {
-                Id = 42342324,
-                Name="Orange",
-                Description = "Orange from Gruzin",
-                Category = "Fruits",
-                Discount = 50,
-                Image = new byte[] {1,2,3,4}
-            });
-            Products.Add(new ProductViewModel
-            {
-                Id = 46542321,
-                Name="Redberry",
-                Description = "Redberry from Ukraine",
-                Category = "Fruits",
-                Discount = 99,
-                Image = new byte[] {1,2,3,4}
-            });
+            _mapper = new Mapper(config);
+            _context = context;
+            Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(context.Products.ToList()));
+            
+
+            //Products.Add(new ProductViewModel
+            //{
+            //    Id = 2312321,
+            //    Name="Banana",
+            //    Description = "Banana from Kavkaz",
+            //    Category = "Fruits",
+            //    Discount = 12,
+            //    Image = new byte[] {1,2,3,4}
+            //});
+            //Products.Add(new ProductViewModel
+            //{
+            //    Id = 42342324,
+            //    Name="Orange",
+            //    Description = "Orange from Gruzin",
+            //    Category = "Fruits",
+            //    Discount = 50,
+            //    Image = new byte[] {1,2,3,4}
+            //});
+            //Products.Add(new ProductViewModel
+            //{
+            //    Id = 46542321,
+            //    Name="Redberry",
+            //    Description = "Redberry from Ukraine",
+            //    Category = "Fruits",
+            //    Discount = 99,
+            //    Image = new byte[] {1,2,3,4}
+            //});
         }
 
-        
     }
 }
