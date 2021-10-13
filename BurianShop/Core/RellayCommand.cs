@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BurianShop.Core
 {
-    class RellayCommand : ICommand
+    public class RellayCommand : ICommand
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;
