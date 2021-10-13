@@ -66,7 +66,7 @@
             </Grid>
         </Border>
         <Border Grid.Row="1"
-                Background="#252525"/>
+                Background="#2f3136"/>
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
             <StackPanel>

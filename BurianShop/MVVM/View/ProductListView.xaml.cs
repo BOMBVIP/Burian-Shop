@@ -24,6 +24,19 @@ namespace BurianShop.MVVM.View
             InitializeComponent();
         }
 
+        private List<Products> GetProducts()
+        {
+            return new List<Products>()
+            {
+                new Products("Banana", 22, "./Icons/banana.jpg"),
+                new Products("Banana1", 22, "./Icons/banana.jpg"),
+                new Products("Banana2", 22, "./Icons/banana.jpg"),
+                new Products("Banana3", 22, "./Icons/banana.jpg"),
+                new Products("Banana4", 22, "./Icons/banana.jpg"),
+                new Products("Banana5", 22, "./Icons/banana.jpg"),
+            };
+        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
