@@ -21,7 +21,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <Border Grid.ColumnSpan="2" Background="#252525" MouseDown="Border_MouseDown">
+        <Border Grid.ColumnSpan="2" Background="#252525" >
             <Grid HorizontalAlignment="Stretch">
                 <Label HorizontalAlignment="Left">
                     <Border x:Name="border228">
