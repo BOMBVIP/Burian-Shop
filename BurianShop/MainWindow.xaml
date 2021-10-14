@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BurianShop" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="BurianShop" 
         Height="500"
         Width="400"
         AllowsTransparency="True"
         WindowStyle="None"
-        Background="#36393F">
+        Background="#36393F" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Grid Margin="0,0,1,0">
         <Grid>
             <Grid.RowDefinitions>
@@ -19,7 +20,7 @@
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="1.5*"/>
             </Grid.RowDefinitions>
-            <Border Grid.RowSpan="4" CornerRadius="12">
+            <Border Grid.RowSpan="4" CornerRadius="12" >
             </Border>
             <Label Foreground="DarkGray"
                FontWeight="SemiBold" MouseDown="Label_MouseDown"
@@ -86,11 +87,12 @@
 
                 <TextBox Grid.Row="1" Height="50"
                          Width="280"
-                         MaxLength="5"
+                         ToolTip="sas"
+                         MaxLength="50"
+                         VerticalContentAlignment="Center"
                          HorizontalAlignment="Center"
-                         Text="Message"
-                         Style="{StaticResource Login}"/>
-
+                         Text=""
+                         Style="{StaticResource Login}" Name="loginTxtBox"/>
                 <Label Content="Password"
                        IsHitTestVisible="False"
                        Width="Auto"
@@ -100,11 +102,12 @@
                        FontWeight="DemiBold"
                        FontSize="15"/>
 
-                <TextBox Grid.Row="1" Height="50"
+                <PasswordBox Grid.Row="1" Height="50"
                          Width="280"
-                         MaxLength="5"
+                         MaxLength="50"
+                             VerticalContentAlignment="Center"
                          HorizontalAlignment="Center"
-                         Style="{StaticResource Password}"/>
+                         Style="{StaticResource Password}" Name="passwordTxtBox"/>
             </StackPanel>
 
             <StackPanel Grid.Row="3">
@@ -114,21 +117,22 @@
                         Content="Sign In"
                         Foreground="White"
                         FontWeight="SemiBold"
-                        FontSize="15">
+                        FontSize="15" Name="signInBtn" Click="signInBtn_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Label Height="30"
-                       Width="Auto"
+                <Button Height="30"
+                       Background="Transparent"
+                       Width="65"
                        Content="Sign Out"
                        HorizontalContentAlignment="Center"
                        VerticalAlignment="Top"
                        Margin="-30"
                        FontSize="15"
-                       Foreground="White"/>
+                       Foreground="White" Name="signOutBtn" Click="signOutBtn_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

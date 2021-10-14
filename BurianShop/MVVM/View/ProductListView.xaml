@@ -12,7 +12,7 @@
         AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip"
         MinHeight="500"
-        MinWidth="500">
+        MinWidth="500" Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>

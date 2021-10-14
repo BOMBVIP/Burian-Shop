@@ -39,6 +39,8 @@ namespace BurianShop.MVVM
     public class ShoppingCard
     {
         [Required]
+        public int Id { get; set; }
+        [Required]
         public int UserId { get; set; }
         public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
     }
@@ -48,6 +50,9 @@ namespace BurianShop.MVVM
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        // Navigation properties
+
+        public virtual ICollection<Product> Products { get; set; }
     }
 
     public class Product
@@ -60,15 +65,17 @@ namespace BurianShop.MVVM
         public string Description { get; set; }
         public byte[] ProductImage { get; set; }
         public int? CategoryId { get; set; }
-        public Category category { get; set; }
+        public virtual Category category { get; set; }
     }
 
 
     public class Role
     {
-        [Key]
+        [Required]
+        public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
         // Navigation properties
-        public ICollection<User> Users { get; set; } = new HashSet<User>();
+        public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
     }
 }
