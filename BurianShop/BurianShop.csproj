@@ -82,6 +82,9 @@
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ProductViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ShoppingCardViewModel.cs" />
+    <Compile Include="MVVM\View\AdminPanelView.xaml.cs">
+      <DependentUpon>AdminPanelView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
@@ -108,6 +111,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\AdminPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

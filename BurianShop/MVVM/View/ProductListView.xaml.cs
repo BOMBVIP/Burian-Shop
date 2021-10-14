@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BurianShop.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace BurianShop.MVVM.View
         public ProductListView()
         {
             InitializeComponent();
+            this.DataContext = new MainViewModel();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
