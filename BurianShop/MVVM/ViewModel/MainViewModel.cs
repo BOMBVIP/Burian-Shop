@@ -12,7 +12,8 @@ namespace BurianShop.MVVM.ViewModel
 {
     public class MainViewModel : ObservableObject
     {
-        ShopModel context ;
+        public ShopModel Context ;
+        public UserViewModel LoginedUser { get; set; } = null;
         public ObservableCollection<ProductViewModel> Products { get; set; }
         public ObservableCollection<UserViewModel> Users { get; set; }
         public ObservableCollection<ShoppingCardViewModel> ShoppingCards { get; set; }
@@ -28,8 +29,7 @@ namespace BurianShop.MVVM.ViewModel
 
         public MainViewModel()
         {
-            Console.WriteLine("uihi");
-            context = new ShopModel();
+            Context = new ShopModel();
             var config = new MapperConfiguration(c => {
                 c.CreateMap<Role, RoleViewModel>().ReverseMap();
                 c.CreateMap<Product, ProductViewModel>().ReverseMap();
@@ -37,16 +37,11 @@ namespace BurianShop.MVVM.ViewModel
                 c.CreateMap<User, UserViewModel>().ReverseMap();
             });
             _mapper = new Mapper(config);
-            _context = context;
-            Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(context.Products.ToList()));
-            MessageBox.Show($"Count users: {context.Users.Count()}");
-            foreach (var item in context.Users)
-            {
-                Console.WriteLine(item.Login);
-                Console.WriteLine(item.Password);
-            }
-            ShoppingCards = new ObservableCollection<ShoppingCardViewModel>(_mapper.Map<IEnumerable<ShoppingCardViewModel>>(context.ShoppingCarts.ToList()));
-            Users = new ObservableCollection<UserViewModel>(_mapper.Map<IEnumerable<UserViewModel>>(context.Users.ToList()));
+            _context = Context;
+            Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(Context.Products.ToList()));
+            
+            ShoppingCards = new ObservableCollection<ShoppingCardViewModel>(_mapper.Map<IEnumerable<ShoppingCardViewModel>>(Context.ShoppingCarts.ToList()));
+            Users = new ObservableCollection<UserViewModel>(_mapper.Map<IEnumerable<UserViewModel>>(Context.Users.ToList()));
             
 
             //Products.Add(new ProductViewModel

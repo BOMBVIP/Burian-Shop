@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BurianShop.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace BurianShop.MVVM.View
     /// </summary>
     public partial class ProductListView : Window
     {
-        public ProductListView()
+        MainWindow mw = null;
+        MainViewModel mainViewModel = null;
+        public ProductListView(ViewModel.MainViewModel mainViewModel, MainWindow mw)
         {
             InitializeComponent();
+            this.mainViewModel = mainViewModel;
+            this.mw = mw;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -46,6 +51,12 @@ namespace BurianShop.MVVM.View
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            mw.Close();
         }
     }
 }

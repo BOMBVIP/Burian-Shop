@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="SecurePasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WPFServices\ValidationControls.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

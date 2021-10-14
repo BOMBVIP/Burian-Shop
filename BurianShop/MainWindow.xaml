@@ -132,7 +132,7 @@
                        VerticalAlignment="Top"
                        Margin="-30"
                        FontSize="15"
-                       Foreground="White" Name="signOutBtn"/>
+                       Foreground="White" Name="signOutBtn" Click="signOutBtn_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

@@ -9,7 +9,7 @@
         Height="500" Width="400"
         Background="#36393F"
         WindowStyle="None"
-        AllowsTransparency="True">
+        AllowsTransparency="True" Closed="Window_Closed">
     <Grid Margin="0,0,1,0">
         <Grid>
             <Grid.RowDefinitions>
@@ -74,9 +74,11 @@
 
                 <TextBox Grid.Row="1" Height="50"
                          Width="280"
-                         MaxLength="5"
+                         MaxLength="50"
                          HorizontalAlignment="Center"
-                         Text="Message"
+                         VerticalContentAlignment="Center"
+                         Text="Enter login"
+                         Name="loginTxtBox"
                          Style="{StaticResource Login}"/>
 
                 <Label Content="Email"
@@ -90,8 +92,11 @@
 
                 <TextBox Grid.Row="1" Height="50"
                          Width="280"
-                         MaxLength="5"
+                         MaxLength="50"
+                         Name="emailTxtBox"
+                         Text="Enter Email"
                          HorizontalAlignment="Center"
+                         VerticalContentAlignment="Center"
                          Style="{StaticResource Login}"/>
 
                 <Label Content="Password"
@@ -103,10 +108,11 @@
                        FontWeight="DemiBold"
                        FontSize="15"/>
 
-                <TextBox Grid.Row="1" Height="50"
+                <PasswordBox Grid.Row="1" Height="50"
                          Width="280"
-                         MaxLength="5"
                          HorizontalAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         Name="passwordPswBox"
                          Style="{StaticResource Password}"/>
 
                 <Label Content="Confirm Password"
@@ -118,22 +124,25 @@
                        FontWeight="DemiBold"
                        FontSize="15"/>
 
-                <TextBox Grid.Row="1" Height="50"
+                <PasswordBox Grid.Row="1" Height="50"
                          Width="280"
-                         MaxLength="5"
+                         VerticalContentAlignment="Center"
                          HorizontalAlignment="Center"
+                         Name="confirmPassPswdBox"
                          Style="{StaticResource Password}"/>
             </StackPanel>
 
             <StackPanel Grid.Row="2"
                         VerticalAlignment="Top">
+                <Button x:Name="backBtn" Foreground="White" Background="#7289da" FontWeight="SemiBold" FontSize="8" Click="backBtn_Click">Return to login</Button>
                 <Button Margin="60,15,60,30"
                         Height="50"
                         Background="#7289da"
-                        Content="Registrate"
+                        Content="Register"
                         Foreground="White"
                         FontWeight="SemiBold"
-                        FontSize="15">
+                        Name="registerBtn"
+                        FontSize="15" Click="registerBtn_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"/>

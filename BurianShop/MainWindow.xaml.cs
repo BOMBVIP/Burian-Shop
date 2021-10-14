@@ -1,4 +1,5 @@
-﻿using BurianShop.MVVM.ViewModel;
+﻿using BurianShop.MVVM.View;
+using BurianShop.MVVM.ViewModel;
 using BurianShopService;
 using System;
 using System.Collections.Generic;
@@ -86,7 +87,7 @@ namespace BurianShop
                 Console.WriteLine(item.Login);
                 Console.WriteLine(item.Password);
             }
-            if (mainViewModel.Users.Any((el)=> el.Login == loginTxtBox.Text))
+            if (!mainViewModel.Users.Any((el)=> el.Login == loginTxtBox.Text))
             {
                 MessageBox.Show("Incorrect user name!");
                 return;
@@ -95,6 +96,11 @@ namespace BurianShop
             if (user != null && user.Password == passwordTxtBox.Password)
             {
                 MessageBox.Show($"Logined as {user.Login}");
+                mainViewModel.LoginedUser = user;
+                ProductListView productListView = new ProductListView(mainViewModel, this);
+                productListView.Show();
+                this.Hide();
+                return;
             }
             //if ()
             //{
@@ -106,6 +112,14 @@ namespace BurianShop
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void signOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            Registration registration = new Registration(mainViewModel, this);
+            registration.Show();
+            this.Hide();
         }
     }
 }
