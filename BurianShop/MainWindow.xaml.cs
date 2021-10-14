@@ -1,4 +1,5 @@
-﻿using BurianShopService;
+﻿using BurianShop.MVVM.ViewModel;
+using BurianShopService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,10 @@ namespace BurianShop
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        MainViewModel mainViewModel = new MainViewModel();
         public MainWindow()
         {
-            
+            this.DataContext = mainViewModel;
             InitializeComponent();
         }
 
@@ -80,10 +81,25 @@ namespace BurianShop
                 MessageBox.Show("Please, enter a password");
                 return;
             }
-            if ()
+            foreach (var item in mainViewModel.Users)
             {
-
+                Console.WriteLine(item.Login);
+                Console.WriteLine(item.Password);
             }
+            if (mainViewModel.Users.Any((el)=> el.Login == loginTxtBox.Text))
+            {
+                MessageBox.Show("Incorrect user name!");
+                return;
+            }
+            var user = mainViewModel.Users.Where((el) => el.Login == loginTxtBox.Text).First();
+            if (user != null && user.Password == passwordTxtBox.Password)
+            {
+                MessageBox.Show($"Logined as {user.Login}");
+            }
+            //if ()
+            //{
+
+            //}
                 
         }
 

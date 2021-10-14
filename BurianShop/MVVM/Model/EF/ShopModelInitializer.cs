@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BurianShop.MVVM
 {
-    public class ShopModelInitializer : CreateDatabaseIfNotExists<ShopModel>
+    public class ShopModelInitializer : DropCreateDatabaseAlways<ShopModel>
     {
         protected override void Seed(ShopModel context)
         {

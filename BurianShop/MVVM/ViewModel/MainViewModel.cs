@@ -6,12 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using System.Windows;
 
 namespace BurianShop.MVVM.ViewModel
 {
     public class MainViewModel : ObservableObject
     {
+        ShopModel context ;
         public ObservableCollection<ProductViewModel> Products { get; set; }
+        public ObservableCollection<UserViewModel> Users { get; set; }
+        public ObservableCollection<ShoppingCardViewModel> ShoppingCards { get; set; }
         public RellayCommand LoadCommand { get; set; }
         private ProductViewModel _product;
         public ProductViewModel Product
@@ -22,14 +26,27 @@ namespace BurianShop.MVVM.ViewModel
         ShopModel _context;
         Mapper _mapper;
 
-        public MainViewModel(ShopModel context)
+        public MainViewModel()
         {
+            Console.WriteLine("uihi");
+            context = new ShopModel();
             var config = new MapperConfiguration(c => {
+                c.CreateMap<Role, RoleViewModel>().ReverseMap();
                 c.CreateMap<Product, ProductViewModel>().ReverseMap();
+                c.CreateMap<ShoppingCard, ShoppingCardViewModel>().ReverseMap();
+                c.CreateMap<User, UserViewModel>().ReverseMap();
             });
             _mapper = new Mapper(config);
             _context = context;
             Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(context.Products.ToList()));
+            MessageBox.Show($"Count users: {context.Users.Count()}");
+            foreach (var item in context.Users)
+            {
+                Console.WriteLine(item.Login);
+                Console.WriteLine(item.Password);
+            }
+            ShoppingCards = new ObservableCollection<ShoppingCardViewModel>(_mapper.Map<IEnumerable<ShoppingCardViewModel>>(context.ShoppingCarts.ToList()));
+            Users = new ObservableCollection<UserViewModel>(_mapper.Map<IEnumerable<UserViewModel>>(context.Users.ToList()));
             
 
             //Products.Add(new ProductViewModel

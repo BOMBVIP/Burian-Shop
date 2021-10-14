@@ -14,10 +14,10 @@ namespace BurianShop.MVVM.ViewModel
         private string name;
         private byte discount;
         private string description;
-        private byte[] image;
-        private string category;
+        private byte[] productImage;
+        private Category category;
 
-        public string Category
+        public Category Category
         {
             get { return category; }
             set { category = value; OnPropertyChanged(); }
@@ -25,8 +25,8 @@ namespace BurianShop.MVVM.ViewModel
 
         public byte[] Image
         {
-            get { return image; }
-            set { image = value; OnPropertyChanged(); }
+            get { return productImage; }
+            set { productImage = value; OnPropertyChanged(); }
         }
 
         public string Description
