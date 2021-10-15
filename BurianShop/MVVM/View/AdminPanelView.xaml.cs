@@ -16,33 +16,18 @@ using System.Windows.Shapes;
 namespace BurianShop.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for ProductListView.xaml
+    /// Interaction logic for AdminPanelView.xaml
     /// </summary>
-    public partial class ProductListView : Window
+    public partial class AdminPanelView : Window
     {
         MainWindow mw = null;
         MainViewModel mainViewModel = null;
-        public ProductListView(ViewModel.MainViewModel mainViewModel, MainWindow mw)
+        public AdminPanelView(ViewModel.MainViewModel mainViewModel, MainWindow mw)
         {
             InitializeComponent();
             this.mainViewModel = mainViewModel;
             this.mw = mw;
         }
-
-        // No need, only for test
-        private List<Products> GetProducts()
-        {
-            return new List<Products>()
-            {
-                new Products("Banana", 22, "C:/Users/vadim_oyanwuw/Desktop/banana.jpg"),
-                new Products("Banana1", 22, "C:/Users/vadim_oyanwuw/Desktop/banana.jpg"),
-                new Products("Banana2", 22, "C:/Users/vadim_oyanwuw/Desktop/banana.jpg"),
-                new Products("Banana3", 22, "C:/Users/vadim_oyanwuw/Desktop/banana.jpg"),
-                new Products("Banana4", 22, "C:/Users/vadim_oyanwuw/Desktop/banana.jpg"),
-                new Products("Banana5", 22, "C:/Users/vadim_oyanwuw/Desktop/banana.jpg"),
-            };
-        }
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -71,6 +56,26 @@ namespace BurianShop.MVVM.View
         private void Window_Closed(object sender, EventArgs e)
         {
             mw.Close();
+        }
+
+        private void btnShopingCard_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRoles_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnUsers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnProducts_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

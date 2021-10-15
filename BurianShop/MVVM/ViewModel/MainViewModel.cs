@@ -12,9 +12,9 @@ namespace BurianShop.MVVM.ViewModel
 {
     public class MainViewModel : ObservableObject
     {
-        public ShopModel Context ;
+        public ShopModel Context;
         public UserViewModel LoginedUser { get; set; } = null;
-        public ObservableCollection<ProductViewModel> Products { get; set; }
+        //public ObservableCollection<ProductViewModel> Products { get; set; }
         public ObservableCollection<UserViewModel> Users { get; set; }
         public ObservableCollection<ShoppingCardViewModel> ShoppingCards { get; set; }
         public RellayCommand LoadCommand { get; set; }
@@ -30,7 +30,8 @@ namespace BurianShop.MVVM.ViewModel
         public MainViewModel()
         {
             Context = new ShopModel();
-            var config = new MapperConfiguration(c => {
+            var config = new MapperConfiguration(c =>
+            {
                 c.CreateMap<Role, RoleViewModel>().ReverseMap();
                 c.CreateMap<Product, ProductViewModel>().ReverseMap();
                 c.CreateMap<ShoppingCard, ShoppingCardViewModel>().ReverseMap();
@@ -38,11 +39,11 @@ namespace BurianShop.MVVM.ViewModel
             });
             _mapper = new Mapper(config);
             _context = Context;
-            Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(Context.Products.ToList()));
-            
+            // Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(Context.Products.ToList()));
+
             ShoppingCards = new ObservableCollection<ShoppingCardViewModel>(_mapper.Map<IEnumerable<ShoppingCardViewModel>>(Context.ShoppingCarts.ToList()));
             Users = new ObservableCollection<UserViewModel>(_mapper.Map<IEnumerable<UserViewModel>>(Context.Users.ToList()));
-            
+
 
             //Products.Add(new ProductViewModel
             //{
