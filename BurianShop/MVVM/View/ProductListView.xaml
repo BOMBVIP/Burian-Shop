@@ -13,6 +13,7 @@
         AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip"
         MinHeight="500"
+        MaxHeight="1070"
         MinWidth="500" Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -76,7 +77,18 @@
                            FontWeight="SemiBold"
                            FontSize="25"
                            Margin="15"/>
-                <StackPanel Margin="15 0">
+                <ListBox x:Name="productsListBox" Background="Transparent" ItemsSource="{Binding Products}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="5">
+                                <TextBlock Width="100" Height="75" Text="{Binding Path=Name}" Foreground="White"/>
+                                <TextBlock FontSize="16" Text="{Binding Path=Price}" HorizontalAlignment="Center" Foreground="White"/>
+                                <TextBlock FontSize="16" Text="{Binding Path=Description}" HorizontalAlignment="Center" Foreground="White"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <!--<StackPanel Margin="15 0">
                     <ItemsControl x:Name="ListViewProducts" ItemsSource="{Binding Products}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
@@ -113,7 +125,7 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
-                </StackPanel>
+                </StackPanel>-->
             </StackPanel>
         </ScrollViewer>
     </Grid>

@@ -8,17 +8,15 @@ using System.Threading.Tasks;
 
 namespace BurianShop.MVVM.ViewModel
 {
-    public class ShoppingCardViewModel : INotifyPropertyChanged
+    public class BasketViewModel : INotifyPropertyChanged
     {
 
         private int id;
-        private List<string> products;
+        private int userId;
+        private UserViewModel user;
+        private ICollection<ProductViewModel> products;
 
-        public List<string>  Products
-        {
-            get { return products; }
-            set { products = value; OnPropertyChanged(); }
-        }
+        public ICollection<ProductViewModel> Products { get => products; set { products = value; OnPropertyChanged(); } }
 
 
         public int Id
@@ -26,7 +24,16 @@ namespace BurianShop.MVVM.ViewModel
             get { return id; }
             set { id = value; OnPropertyChanged(); }
         }
-
+        public int UserId
+        {
+            get { return userId; }
+            set { userId = value; OnPropertyChanged(); }
+        }
+        public UserViewModel User
+        {
+            get { return user; }
+            set { user = value; OnPropertyChanged(); }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)

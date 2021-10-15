@@ -16,31 +16,46 @@ namespace BurianShop.MVVM.ViewModel
         public User LoginedUser { get; set; } = null;
         //public ObservableCollection<ProductViewModel> Products { get; set; }
         public ObservableCollection<UserViewModel> Users { get; set; }
-        public ObservableCollection<ShoppingCardViewModel> ShoppingCards { get; set; }
+        private ObservableCollection<ProductViewModel> products;
+        public ObservableCollection<ProductViewModel> Products { get => products; set { products = value; OnPropertyChanged(); } }
+
+        public ObservableCollection<BasketViewModel> Baskets { get; set; }
         public RellayCommand LoadCommand { get; set; }
-        private ProductViewModel _product;
-        public ProductViewModel Product
-        {
-            get => _product;
-            set { _product = value; OnPropertyChanged(); }
-        }
+        //private ProductViewModel _product;
+        //public ProductViewModel Products
+        //{
+        //    get => _product;
+        //    set { _product = value; OnPropertyChanged(); }
+        //}
         ShopModel _context;
         Mapper _mapper;
-
+        public void UpdateProducts() {
+           
+            Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(Context.Products.ToList()));
+            
+        }
+        public void UpdateBaskets() {
+            Baskets = new ObservableCollection<BasketViewModel>(_mapper.Map<IEnumerable<BasketViewModel>>(Context.Baskets.ToList()));
+        }
+        public void UpdateUsers() {
+            Users = new ObservableCollection<UserViewModel>(_mapper.Map<IEnumerable<UserViewModel>>(Context.Users.ToList()));
+        }
         public MainViewModel()
         {
             Context = new ShopModel();
             var config = new MapperConfiguration(c =>
             {      
+                c.CreateMap<Role, RoleViewModel>().ReverseMap();
                 c.CreateMap<Product, ProductViewModel>().ReverseMap();
                 c.CreateMap<User, UserViewModel>().ReverseMap();
+                c.CreateMap<Basket, BasketViewModel>().ReverseMap();
             });
             _mapper = new Mapper(config);
             _context = Context;
             // Products = new ObservableCollection<ProductViewModel>(_mapper.Map<IEnumerable<ProductViewModel>>(Context.Products.ToList()));
 
             //ShoppingCards = new ObservableCollection<ShoppingCardViewModel>(_mapper.Map<IEnumerable<ShoppingCardViewModel>>(Context.ShoppingCarts.ToList()));
-            Users = new ObservableCollection<UserViewModel>(_mapper.Map<IEnumerable<UserViewModel>>(Context.Users.ToList()));
+           
 
 
             //Products.Add(new ProductViewModel

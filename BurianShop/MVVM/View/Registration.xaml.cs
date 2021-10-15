@@ -81,6 +81,11 @@ namespace BurianShop.MVVM.View
                 MessageBox.Show("Password does not match with re-enetered password!");
                 return;
             }
+            if (mainViewModel.Users.Any((el)=> el.Login == loginTxtBox.Text))
+            {
+                MessageBox.Show("User with same name already exists!");
+                return;
+            }
             try {
                 mainViewModel.Context.Users.Add(new User { Login = loginTxtBox.Text, Password = passwordPswBox.Password, Email = emailTxtBox.Text });
                 mainViewModel.Context.SaveChanges();

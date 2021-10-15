@@ -13,6 +13,7 @@ namespace BurianShop.MVVM.ViewModel
         private int id;
         private string name;
         private byte discount;
+        private decimal price;
         private string description;
         private byte[] productImage;
         private Category category;
@@ -40,7 +41,11 @@ namespace BurianShop.MVVM.ViewModel
             get { return discount; }
             set { discount = value; OnPropertyChanged(); }
         }
-
+        public decimal Price
+        {
+            get { return price; }
+            set { price = value; OnPropertyChanged(); }
+        }
         public string Name
         {
             get { return name; }

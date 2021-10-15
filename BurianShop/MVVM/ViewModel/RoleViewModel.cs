@@ -7,7 +7,9 @@ namespace BurianShop.MVVM.ViewModel
     public class RoleViewModel : INotifyPropertyChanged
     {
         private string name;
+        private int id;
 
+        public int Id { get => id;  set { id = value; OnPropertyChanged(); } }
         public string Name { get => name;  set { name = value; OnPropertyChanged(); } }
         //public ICollection<UserViewModel> Users { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;

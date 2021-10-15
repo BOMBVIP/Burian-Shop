@@ -85,7 +85,7 @@
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ProductViewModel.cs" />
     <Compile Include="MVVM\ViewModel\RoleViewModel.cs" />
-    <Compile Include="MVVM\ViewModel\ShoppingCardViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\BasketViewModel.cs" />
     <Compile Include="MVVM\ViewModel\UserViewModel.cs" />
     <Compile Include="MVVM\View\AdminPanelView.xaml.cs">
       <DependentUpon>AdminPanelView.xaml</DependentUpon>

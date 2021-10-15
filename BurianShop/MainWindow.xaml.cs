@@ -30,11 +30,6 @@ namespace BurianShop
             InitializeComponent();
         }
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-        }
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
@@ -66,7 +61,7 @@ namespace BurianShop
         }
         private void signInBtn_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"{loginTxtBox.Text}, {passwordTxtBox.Password}");
+            //MessageBox.Show($"{loginTxtBox.Text}, {passwordTxtBox.Password}");
             //foreach (var item in FindVisualChildren<TextBox>(this))
             //{
             //    Console.WriteLine(item);
@@ -82,12 +77,12 @@ namespace BurianShop
                 MessageBox.Show("Please, enter a password");
                 return;
             }
-            foreach (var item in mainViewModel.Users)
-            {
-                Console.WriteLine(item.Login);
-                Console.WriteLine(item.Password);
-            }
-            if (!mainViewModel.Users.Any((el)=> el.Login == loginTxtBox.Text))
+            //foreach (var item in mainViewModel.Users)
+            //{
+            //    Console.WriteLine(item.Login);
+            //    Console.WriteLine(item.Password);
+            //}
+            if (!mainViewModel.Context.Users.Any((el)=> el.Login == loginTxtBox.Text))
             {
                 MessageBox.Show("Incorrect user name!");
                 return;
@@ -97,6 +92,7 @@ namespace BurianShop
             {
                 MessageBox.Show($"Logined as {user.Login}");
                 mainViewModel.LoginedUser = user;
+                mainViewModel.UpdateProducts();
                 ProductListView productListView = new ProductListView(mainViewModel, this);
                 productListView.Show();
                 this.Hide();

@@ -26,6 +26,7 @@ namespace BurianShop.MVVM.View
         {
             InitializeComponent();
             this.mainViewModel = mainViewModel;
+            this.DataContext = mainViewModel;
             this.mw = mw;
         }
 
