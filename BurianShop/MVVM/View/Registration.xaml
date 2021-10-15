@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BurianShop.MVVM.View"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Registration"
         Height="500" Width="400"
         Background="#36393F"

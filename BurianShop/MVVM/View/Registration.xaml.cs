@@ -82,7 +82,7 @@ namespace BurianShop.MVVM.View
                 return;
             }
             try {
-                mainViewModel.Context.Users.Add(new User { Login = loginTxtBox.Text, Password = passwordPswBox.Password, Role = mainViewModel.Context.Roles.Where((el) => el.Name == "User").First() });
+                mainViewModel.Context.Users.Add(new User { Login = loginTxtBox.Text, Password = passwordPswBox.Password, Email = emailTxtBox.Text });
                 mainViewModel.Context.SaveChanges();
                 MessageBox.Show($"Hi from BurianShop, {loginTxtBox.Text}!");
             }

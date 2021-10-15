@@ -92,7 +92,7 @@ namespace BurianShop
                 MessageBox.Show("Incorrect user name!");
                 return;
             }
-            var user = mainViewModel.Users.Where((el) => el.Login == loginTxtBox.Text).First();
+            var user = mainViewModel.Context.Users.Where((el) => el.Login == loginTxtBox.Text).First();
             if (user != null && user.Password == passwordTxtBox.Password)
             {
                 MessageBox.Show($"Logined as {user.Login}");

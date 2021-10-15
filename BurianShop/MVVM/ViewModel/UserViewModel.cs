@@ -16,8 +16,6 @@ namespace BurianShop.MVVM.ViewModel
         private string password;
         private int roleId;
         private decimal money;
-        private Role role;
-
         public event PropertyChangedEventHandler PropertyChanged;
 
 
@@ -26,7 +24,6 @@ namespace BurianShop.MVVM.ViewModel
         public string Password { get => password; set { password = value; OnPropertyChanged(); } }
         public int RoleId { get => roleId; set { roleId = value; OnPropertyChanged(); } }
         public decimal Money { get => money; set { money = value; OnPropertyChanged(); } }
-        public Role Role { get => role; set { role = value; OnPropertyChanged(); } }
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
