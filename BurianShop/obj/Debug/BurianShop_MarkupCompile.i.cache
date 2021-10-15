@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\App.xaml
-13709343408
+111784134905
 
-25428059679
+23-1068216944
 221748352148
-MainWindow.xaml;MVVM\View\AdminPanelView.xaml;MVVM\View\Authorization.xaml;MVVM\View\Pages\ProductPage.xaml;MVVM\View\Pages\RolePage.xaml;MVVM\View\Pages\ShopingCardPage.xaml;MVVM\View\Pages\UserPage.xaml;MVVM\View\ProductListView.xaml;MVVM\View\Registration.xaml;MVVM\View\SettingsPage.xaml;Themes\Password.xaml;Themes\Login.xaml;Themes\ScrollBar.xaml;
+MainWindow.xaml;MVVM\View\AdminPanelView.xaml;MVVM\View\Authorization.xaml;MVVM\View\Pages\ProductPage.xaml;MVVM\View\Pages\UserPage.xaml;MVVM\View\ProductListView.xaml;MVVM\View\Registration.xaml;MVVM\View\SettingsPage.xaml;Themes\Password.xaml;Themes\Login.xaml;Themes\ScrollBar.xaml;
 
-True
+False
 

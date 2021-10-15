@@ -96,12 +96,6 @@
     <Compile Include="MVVM\View\Pages\ProductPage.xaml.cs">
       <DependentUpon>ProductPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\View\Pages\RolePage.xaml.cs">
-      <DependentUpon>RolePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MVVM\View\Pages\ShopingCardPage.xaml.cs">
-      <DependentUpon>ShopingCardPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MVVM\View\Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
@@ -137,14 +131,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MVVM\View\Pages\ProductPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MVVM\View\Pages\RolePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MVVM\View\Pages\ShopingCardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

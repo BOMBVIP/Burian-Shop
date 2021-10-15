@@ -20,9 +20,32 @@ namespace BurianShop.MVVM.View.Pages
     /// </summary>
     public partial class UserPage : Page
     {
+        ShopModel context;
         public UserPage()
         {
             InitializeComponent();
+        }
+
+        private void btnNewAccount_Click(object sender, RoutedEventArgs e)
+        {
+            CreateNewAccount(tbLogin.Text, tbPassword.Text, tbEmail.Text);
+        }
+        private void CreateNewAccount(string login,string password,string email)
+        {
+            try
+            {
+                context.Users.Add(new User()
+                {
+                    Login = login,
+                    Password = password,
+                    Email = email
+                });
+                context.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
     }
 }

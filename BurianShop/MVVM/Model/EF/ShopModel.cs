@@ -16,10 +16,8 @@ namespace BurianShop.MVVM
         {
             Database.SetInitializer(new ShopModelInitializer());
         }
-        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ShoppingCard> ShoppingCarts { get; set; }
     }
 
     public class User
@@ -30,34 +28,24 @@ namespace BurianShop.MVVM
         public string Login { get; set; }
         [Required]
         public string Password { get; set; }
-        [Required]
-        public int RoleId { get; set; }
-        public decimal Money { get; set; }
-        // Navigation property
-        public virtual Role Role { get; set; }
+        public string Email { get; set; }
+        public ICollection<Product> Products { get; set; }
+        public User()
+        {
+            Products = new List<Product>();
+        }
     }
-    public class ShoppingCard
-    {
-        [Required]
-        public int Id { get; set; }
-        [Required]
-        public int UserId { get; set; }
-        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
-    }
-
     public class Category
     {
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        // Navigation properties
-
         public virtual ICollection<Product> Products { get; set; }
     }
 
     public class Product
     {
-        [Required] 
+        [Required]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
@@ -66,16 +54,5 @@ namespace BurianShop.MVVM
         public byte[] ProductImage { get; set; }
         public int? CategoryId { get; set; }
         public virtual Category category { get; set; }
-    }
-
-
-    public class Role
-    {
-        [Required]
-        public int Id { get; set; }
-        [Required]
-        public string Name { get; set; }
-        // Navigation properties
-        public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
     }
 }

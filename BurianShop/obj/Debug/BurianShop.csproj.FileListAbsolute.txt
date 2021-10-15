@@ -141,3 +141,5 @@ C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\obj\Debug\BurianSh
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\obj\Debug\BurianShop.pdb
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\obj\Debug\MVVM\View\AdminPanelView.g.cs
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\obj\Debug\MVVM\View\AdminPanelView.baml
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\obj\Debug\MVVM\View\Pages\ProductPage.g.cs
+C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShop\obj\Debug\MVVM\View\Pages\UserPage.g.cs

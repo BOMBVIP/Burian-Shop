@@ -6,8 +6,10 @@
       xmlns:local="clr-namespace:BurianShop.MVVM.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ProductPage">
+      Title="ProductPage" Background="#36393F">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Enter login" FontSize="30" Foreground="White" FontWeight="Medium" />
+        </StackPanel>
     </Grid>
 </Page>
