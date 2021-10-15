@@ -1,4 +1,5 @@
-﻿using BurianShop.MVVM.ViewModel;
+﻿using BurianShop.MVVM.View.Pages;
+using BurianShop.MVVM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,24 +59,20 @@ namespace BurianShop.MVVM.View
             mw.Close();
         }
 
-        private void btnShopingCard_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnRoles_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btnUsers_Click(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new UserPage();
         }
 
         private void btnProducts_Click(object sender, RoutedEventArgs e)
         {
+            Main.Content = new ProductPage();
+        }
 
+        private void btnCategory_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Category();
         }
     }
 }
