@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,11 +20,11 @@ namespace BurianShop.MVVM
             Role admin = context.Roles.Add(new Role { Name = "Admin" });
             context.SaveChanges();
             User adminUser = context.Users.Add(new User { Login = "admin", Password = "admin2281337" });
-            User simpleUser = context.Users.Add(new User { Login = "s1mple", Password = "sosikapapirimskogo2009"});
+            User simpleUser = context.Users.Add(new User { Login = "s1mple", Password = "sosikapapirimskogo2009" });
             context.SaveChanges();
-            context.Products.Add(new Product { Name = "Banana", Category = fruits, Price = 20});
-            context.Products.Add(new Product { Name = "Oil", Category = for_cooking, Price = 33});
-            context.Products.Add(new Product { Name = "Bread", Category = bakery, Price = 17});
+            context.Products.Add(new Product { Name = "Banana", Category = fruits, Price = 20, ProductImage = File.ReadAllBytes("./Icons/banana.jpg")});
+            context.Products.Add(new Product { Name = "Oil", Category = for_cooking, Price = 33, ProductImage = File.ReadAllBytes("./Icons/banana.jpg") });
+            context.Products.Add(new Product { Name = "Bread", Category = bakery, Price = 17, ProductImage = File.ReadAllBytes("./Icons/banana.jpg") });
             context.SaveChanges();
             base.Seed(context);
         }

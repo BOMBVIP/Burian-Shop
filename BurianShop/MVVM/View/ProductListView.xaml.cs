@@ -73,5 +73,10 @@ namespace BurianShop.MVVM.View
         {
             mw.Close();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AdminPanelView admin = new AdminPanelView(mainViewModel, mw);
+            admin.Show();
+        }
     }
 }

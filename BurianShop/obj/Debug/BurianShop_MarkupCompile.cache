@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\vadim_oyanwuw\source\repos\burian-shop2.0\BurianShop\obj\Debug\
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShop\obj\Debug\
 BurianShop
 none
 false
 DEBUG;TRACE
-c:\users\vadim_oyanwuw\source\repos\burian-shop2.0\BurianShop\App.xaml
-111784134905
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShop\App.xaml
+13-477787929
 
-22-225857577
-22526391809
-MainWindow.xaml;MVVM\View\AdminPanelView.xaml;MVVM\View\Authorization.xaml;MVVM\View\Pages\ProductPage.xaml;MVVM\View\Pages\UserPage.xaml;MVVM\View\ProductListView.xaml;MVVM\View\Registration.xaml;MVVM\View\SettingsPage.xaml;Themes\Password.xaml;Themes\Login.xaml;Themes\ScrollBar.xaml;
+23896741789
+135-1762451977
+MainWindow.xaml;MVVM\View\AdminPanelView.xaml;MVVM\View\Authorization.xaml;MVVM\View\Pages\CategoryPage.xaml;MVVM\View\Pages\ProductPage.xaml;MVVM\View\Pages\UserPage.xaml;MVVM\View\ProductListView.xaml;MVVM\View\Registration.xaml;MVVM\View\SettingsPage.xaml;Themes\ComboboxRadius.xaml;Themes\Password.xaml;Themes\Login.xaml;Themes\ScrollBar.xaml;
 
-True
+False
 

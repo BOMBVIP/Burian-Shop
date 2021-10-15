@@ -93,9 +93,7 @@ namespace BurianShop
                 MessageBox.Show($"Logined as {user.Login}");
                 mainViewModel.LoginedUser = user;
                 mainViewModel.UpdateProducts();
-                ProductListView productListView = new ProductListView(mainViewModel, this);
-                productListView.Show();
-                this.Hide();
+                ShowProductList();
                 return;
             }
             //if ()
@@ -103,6 +101,13 @@ namespace BurianShop
 
             //}
                 
+        }
+
+        private void ShowProductList()
+        {
+            ProductListView productListView = new ProductListView(mainViewModel, this);
+            productListView.Show();
+            this.Hide();
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

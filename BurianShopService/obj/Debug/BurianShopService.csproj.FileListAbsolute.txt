@@ -9,3 +9,9 @@ C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShopService\bin\Debug\B
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShopService\obj\Debug\BurianShopService.csproj.CoreCompileInputs.cache
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShopService\obj\Debug\BurianShopService.dll
 C:\Users\vadim_oyanwuw\Source\Repos\Burian-Shop2.0\BurianShopService\obj\Debug\BurianShopService.pdb
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShopService\bin\Debug\BurianShopService.dll
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShopService\bin\Debug\BurianShopService.pdb
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShopService\obj\Debug\BurianShopService.csprojAssemblyReference.cache
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShopService\obj\Debug\BurianShopService.csproj.CoreCompileInputs.cache
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShopService\obj\Debug\BurianShopService.dll
+C:\Users\dev.itstep.000\Source\Repos\Burian-Shop423423\BurianShopService\obj\Debug\BurianShopService.pdb

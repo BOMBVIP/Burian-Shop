@@ -81,7 +81,7 @@ namespace BurianShop.MVVM.View
                 MessageBox.Show("Password does not match with re-enetered password!");
                 return;
             }
-            if (mainViewModel.Users.Any((el)=> el.Login == loginTxtBox.Text))
+            if (mainViewModel.Context.Users.Any((el)=> el.Login == loginTxtBox.Text))
             {
                 MessageBox.Show("User with same name already exists!");
                 return;

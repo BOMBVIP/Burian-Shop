@@ -128,5 +128,16 @@
                 </StackPanel>-->
             </StackPanel>
         </ScrollViewer>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <StackPanel>
+                <Button Height="50" Background="#7289da" Content="Admin Panel" FontSize="20" FontWeight="Medium" Foreground="White" Click="Button_Click" >
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
