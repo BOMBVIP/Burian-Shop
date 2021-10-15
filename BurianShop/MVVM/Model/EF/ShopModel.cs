@@ -52,9 +52,7 @@ namespace BurianShop.MVVM
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-
-        // Navigation properties
-        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
+        public virtual ICollection<Product> Products { get; set; }
     }
 
     public class Product
@@ -68,19 +66,7 @@ namespace BurianShop.MVVM
         public decimal Price { get; set; }
         public byte[] ProductImage { get; set; }
         public int? CategoryId { get; set; }
-
-        // Navigation properties
-        public virtual Category Category { get; set; }
-    }
-    public class Basket
-    {
-        [Required]
-        public int Id { get; set; }
-        public int UserId { get; set; }
-
-        // Navigation properties
-        public virtual User User { get; set; }
-        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
+        public virtual Category category { get; set; }
     }
 
 }

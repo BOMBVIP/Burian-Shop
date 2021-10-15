@@ -16,36 +16,31 @@ using System.Windows.Shapes;
 namespace BurianShop.MVVM.View.Pages
 {
     /// <summary>
-    /// Interaction logic for UserPage.xaml
+    /// Interaction logic for CategoryPage.xaml
     /// </summary>
-    public partial class UserPage : Page
+    public partial class CategoryPage : Page
     {
         ShopModel context;
-        public UserPage()
+        public CategoryPage()
         {
             InitializeComponent();
         }
 
-        private void btnNewAccount_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CreateNewAccount(tbLogin.Text, tbPassword.Text, tbEmail.Text);
+            
         }
-        private void CreateNewAccount(string login,string password,string email)
+        public void CreateNewCategory(string name)
         {
             try
             {
                 context = new ShopModel();
-                context.Users.Add(new User()
-                {
-                    Login = login,
-                    Password = password,
-                    Email = email
-                });
+                context.Categories.Add(new Category() { Name = name });
                 context.SaveChanges();
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(ex.ToString());
             }
         }
     }
