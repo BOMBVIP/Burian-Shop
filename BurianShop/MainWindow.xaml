@@ -23,8 +23,8 @@
             <Border Grid.RowSpan="4" CornerRadius="12" >
             </Border>
             <Label Foreground="DarkGray"
-               FontWeight="SemiBold" MouseDown="Label_MouseDown"
-                Margin="0,0,-1,0"/>
+               FontWeight="SemiBold"
+                Margin="0,0,-1,0" Content="BURIAN SHOP" VerticalAlignment="Center"/>
             <StackPanel Grid.Row="0"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal" Margin="0,0,-1,0">
