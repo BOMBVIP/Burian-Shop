@@ -18,6 +18,7 @@ namespace BurianShop.MVVM
         }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
     }
 
     public class User
@@ -37,7 +38,6 @@ namespace BurianShop.MVVM
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
     }
 
     public class Product
@@ -50,6 +50,6 @@ namespace BurianShop.MVVM
         public string Description { get; set; }
         public byte[] ProductImage { get; set; }
         public int? CategoryId { get; set; }
-        public virtual Category category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

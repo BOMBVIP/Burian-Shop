@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="./Themes/ScrollBar.xaml"/>
                 <ResourceDictionary Source="./Themes/Login.xaml"/>
                 <ResourceDictionary Source="./Themes/Password.xaml"/>
+                <ResourceDictionary Source="./Themes/ComboboxRadius.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <FontFamily x:Key="BebasFontLight">./Fonts/BebasNeue Light.ttf#Bebas Neue</FontFamily>
             <FontFamily x:Key="BebasFontBook">./Fonts/BebasNeue Book.ttf#Bebas Neue</FontFamily>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="BurianShop.MVVM.View.Pages.CategoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BurianShop.MVVM.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CategoryPage" Background="#36393F">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Enter name" FontSize="30" Foreground="White" FontWeight="Medium" />
+            <TextBox Style="{StaticResource Login}" FontSize="30" Name="tbName" Width="300" />
+            <Button Height="50" Background="#7289da" Content="New category" FontSize="30" FontWeight="Medium" Foreground="White" Click="Button_Click" Margin="0 10 0 0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
