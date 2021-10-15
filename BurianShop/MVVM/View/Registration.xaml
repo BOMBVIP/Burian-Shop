@@ -135,7 +135,7 @@
 
             <StackPanel Grid.Row="2"
                         VerticalAlignment="Top">
-                <Button x:Name="backBtn" Foreground="White" Background="#7289da" FontWeight="SemiBold" FontSize="8" Click="backBtn_Click">Return to login</Button>
+                <Button x:Name="backBtn" Foreground="White" Background="#7289da" FontWeight="SemiBold" FontSize="8" Click="backBtn_Click" Width="275">Return to login</Button>
                 <Button Margin="60,15,60,30"
                         Height="50"
                         Background="#7289da"
