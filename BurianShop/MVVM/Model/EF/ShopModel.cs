@@ -29,11 +29,8 @@ namespace BurianShop.MVVM
         [Required]
         public string Password { get; set; }
         public string Email { get; set; }
-        public ICollection<Product> Products { get; set; }
-        public User()
-        {
-            Products = new List<Product>();
-        }
+        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
+
     }
     public class Category
     {
